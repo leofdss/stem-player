@@ -1,10 +1,33 @@
-# proj-foundation
+# stem-player
 
-## Commits
+## Distrobox
 
-[Conventional Commits](https://www.conventionalcommits.org/)
+[distrobox.ini](./distrobox.ini)
 
-## Dependencies
+### Starship - Opcional
 
-- Rust
-- Git
+Dentro do container
+
+```bash
+sudo pacman -S starship
+```
+
+```bash
+echo 'eval "$(starship init bash)"' >> ~/.bashrc
+```
+
+### Vscode - Opcional
+
+Dentro do container
+
+```bash
+sudo pacman -S code
+```
+
+```bash
+distrobox-export --app code
+```
+
+```bash
+code --install-extension rust-lang.rust-analyzer --install-extension vadimcn.vscode-lldb
+```
