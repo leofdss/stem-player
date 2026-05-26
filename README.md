@@ -1,3 +1,6 @@
+> [!WARNING]
+> Ainda em desenvolvimento, nada está funcional
+
 # Stem Player
 
 Aplicativo desktop para reprodução de *stems* musicais com foco em **criar loops
