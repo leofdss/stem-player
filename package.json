@@ -6,7 +6,17 @@
     "start": "ng serve --host=0.0.0.0",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "lint": "eslint \"src/**/*.{ts,html}\"",
+    "lint:fix": "eslint \"src/**/*.{ts,html}\" --fix",
+    "format": "prettier --write \"src/**/*.{ts,html,css,scss,json}\"",
+    "format:check": "prettier --check \"src/**/*.{ts,html,css,scss,json}\"",
+    "commitlint": "commitlint --edit",
+    "harness": "bash .harness/verify.sh",
+    "harness:all": "bash .harness/verify.sh --all",
+    "harness:quick": "bash .harness/verify.sh --quick",
+    "harness:install": "bash .harness/install.sh",
+    "prepare": "git config core.hooksPath .harness/hooks || true"
   },
   "private": true,
   "dependencies": {
@@ -27,6 +37,14 @@
     "@angular/cli": "^20.1.4",
     "@angular/compiler-cli": "^20.1.4",
     "@tauri-apps/cli": "^2",
-    "typescript": "~5.8.3"
+    "typescript": "~5.8.3",
+    "@eslint/js": "^9.9.0",
+    "eslint": "^9.9.0",
+    "typescript-eslint": "^8.0.0",
+    "angular-eslint": "^20.0.0",
+    "prettier": "^3.3.0",
+    "@commitlint/cli": "^19.4.0",
+    "@commitlint/config-conventional": "^19.4.0",
+    "openspec": "latest"
   }
 }
