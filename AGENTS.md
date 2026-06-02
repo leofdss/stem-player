@@ -33,6 +33,11 @@ O fluxo Plan → Execute → Verify tem dois subagentes dedicados em
   cenário. É o mesmo papel automatizável via `HARNESS_VERIFIER_CMD` no
   `verifiers/independent-verify.sh`.
 
+Atalho: o comando `/harness:pev <feature>` encadeia as três fases de uma vez,
+delegando Plan e Verify aos subagentes e fazendo a Execute em TDD, com portões
+de aprovação entre as fases. Para só a fase Verify (ex.: antes de um commit
+pontual), use `/harness:verify [change]`.
+
 ## Restrições inegociáveis (o harness reprova quem violar)
 
 - **`stem-core` é puro e independente.** Não depende de Tauri, nem de UI.
