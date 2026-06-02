@@ -6,4 +6,4 @@ code --install-extension rust-lang.rust-analyzer --install-extension vadimcn.vsc
 
 npm install -g @fission-ai/openspec@latest
 npm install -g @anthropic-ai/claude-code
-.harness/install.sh
+bash .harness/install.sh
