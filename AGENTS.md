@@ -19,6 +19,20 @@ a lógica** vive no crate Rust **`stem-core`**.
    **Nada de código antes da proposta revisada.** (skills em `.claude/`.)
 3. Cada task segue **TDD**: teste que falha → implementação mínima → refatoração.
 
+## Loop PEV e subagentes (Claude Code)
+
+O fluxo Plan → Execute → Verify tem dois subagentes dedicados em
+`.claude/agents/`, que separam quem planeja/verifica de quem implementa:
+
+- **Plan** → delegue ao subagente `spec-author` para redigir a change OpenSpec
+  (proposal.md, tasks.md, specs com Requirement + Scenario) antes de codar.
+- **Execute** → o agente principal implementa em `stem-core`, guiado pelos
+  testes derivados de cada `### Scenario:`.
+- **Verify** → delegue ao subagente `harness-verifier` (só leitura) para uma
+  conferência cética e independente. Ele roda `verify.sh --all` e confirma cada
+  cenário. É o mesmo papel automatizável via `HARNESS_VERIFIER_CMD` no
+  `verifiers/independent-verify.sh`.
+
 ## Restrições inegociáveis (o harness reprova quem violar)
 
 - **`stem-core` é puro e independente.** Não depende de Tauri, nem de UI.
