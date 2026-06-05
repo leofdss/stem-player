@@ -29,6 +29,9 @@ yarn-error.log
 !.vscode/extensions.json
 .history/*
 
+# Harness cache (logs, ex.: saída de verify.sh consumida por harness-digest)
+/.harness/.cache
+
 # Miscellaneous
 /.angular/cache
 .sass-cache/
