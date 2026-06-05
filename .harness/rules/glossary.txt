@@ -1,0 +1,12 @@
+# Glossário executável — termos banidos = termo preferido
+# Mantido em sintonia com o glossário de openspec/project.md.
+# Comentários começam com '#'. Verificação é aviso (warn), não bloqueio.
+# Anote falsos positivos com `// harness:allow` na linha.
+#
+# Mantido enxuto de propósito: só termos cujo uso quase sempre indica confusão
+# de domínio. Evite banir palavras inglesas legítimas (ex.: "track length").
+
+playlist = projeto
+snippet  = loop
+clip     = loop
+bookmark = marcador

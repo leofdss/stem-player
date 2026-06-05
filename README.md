@@ -134,6 +134,13 @@ npm run tauri dev
 npm run tauri build
 ```
 
+## Harness
+
+```bash
+# Linux
+bash .harness/install.sh
+```
+
 ## Desenvolvimento
 
 O projeto segue **Spec-Driven Development** com o

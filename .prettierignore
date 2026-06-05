@@ -1,0 +1,8 @@
+# Gerados / fora do escopo do front
+dist/
+node_modules/
+target/
+Cargo.lock
+package-lock.json
+src-tauri/gen/
+src/assets/

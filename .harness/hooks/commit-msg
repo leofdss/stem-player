@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Hook commit-msg: valida Conventional Commits via commitlint.
+set -uo pipefail
+ROOT="$(git rev-parse --show-toplevel)"
+bash "$ROOT/.harness/gates/commit-lint.sh" "$1"
