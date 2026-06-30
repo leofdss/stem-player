@@ -13,8 +13,21 @@ if command -v npm >/dev/null 2>&1; then
   npm install
 fi
 
-echo "› (opcional) ferramenta de cobertura Rust:"
-echo "    cargo install cargo-llvm-cov"
+if command -v rustup >/dev/null 2>&1; then
+  echo "› instalando devDependencies do rustup"
+  rustup default stable
+  rustup component add llvm-tools-preview
+fi
+
+if command -v cargo >/dev/null 2>&1; then
+  echo "› instalando devDependencies do cargo"
+  cargo install cargo-llvm-cov cargo-binutils
+fi
+
+if command -v starship >/dev/null 2>&1; then
+  echo "› configurando prompt"
+  echo "starship init fish | source" >> "$HOME/.config/fish/config.fish"
+fi
 
 echo
 echo "✓ Harness ativo. Comandos úteis:"
